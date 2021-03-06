@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Amazon Tests" verbose="1" parallel="tests">
+    <parameter name="url" value="https://amazon.in/"/>
+    <parameter name="os" value="windows"/>
+    <parameter name="node" value="node_url"/>
+
+    <test name="Tests on Firefox" preserve-order="true" group-by-instances="true">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="testrunner.AmazonTestClass1"/>
+        </classes>
+    </test>
+
+    <test name="Tests on IE" preserve-order="true" group-by-instances="true">
+        <parameter name="browser" value="ie"/>
+        <classes>
+            <class name="testrunner.AmazonTestClass1"/>
+        </classes>
+    </test>
+
+    <test name="Tests on Chrome" preserve-order="true" group-by-instances="true">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="testrunner.AmazonTestClass1"/>
+        </classes>
+    </test>
+
+</suite>
